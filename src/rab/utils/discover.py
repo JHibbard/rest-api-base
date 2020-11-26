@@ -6,8 +6,8 @@ This module contains logic for resource discovery.
 import pkgutil
 import importlib
 
-
-_package = __import__(__name__)
+# Internal Libraries
+import rab
 
 
 def iter_namespace(ns_pkg):
@@ -21,5 +21,5 @@ def iter_namespace(ns_pkg):
 apis = {
     name: importlib.import_module(name)
     for finder, name, ispkg
-    in iter_namespace(_package.plugins)
-} if hasattr(_package, 'plugins') else {}
+    in iter_namespace(rab.plugins)
+} if hasattr(rab, 'plugins') else {}
