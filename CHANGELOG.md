@@ -16,4 +16,5 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Initial Commit] - 2020-11-25
 
-[Initial Commit]: https://github.com/JHibbard/rest-api-server-base/commit/0de12900e824b3edfe680e7a60b7c0aca9731050
+[0.1.0]: https://github.com/JHibbard/rest-api-base/compare/0de12900e824b3edfe680e7a60b7c0aca9731050...8a8753a9fb7427e7e1bf5dacc583599f5fd5cf5f
+[Initial Commit]: https://github.com/JHibbard/rest-api-base/commit/0de12900e824b3edfe680e7a60b7c0aca9731050
