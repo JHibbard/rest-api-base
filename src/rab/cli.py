@@ -51,7 +51,5 @@ def server(host, port, workers, gunicorn_opts):
     try:
         _run_server(gunicorn_opts=gunicorn_opts, host=host, port=port, workers=workers)
     except ShellCommandException:
-        eprint(
-            "Running the server failed. Please see the logs above for details."
-        )
+        eprint("Running the server failed. Please see the logs above for details.")
         sys.exit(1)

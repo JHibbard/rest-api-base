@@ -34,8 +34,8 @@ Building Distribution
 
 Building Wheel:
 
-    python setup.py bdist_wheel
-    
+    python setup.py bdist_wheel sdist
+
 Installing Wheel:
 
     pip install /path/to/wheel/..

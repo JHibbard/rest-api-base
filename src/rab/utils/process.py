@@ -9,6 +9,7 @@ import subprocess
 
 class ShellCommandException(Exception):
     """Custom Exception for Shell Commands"""
+
     pass
 
 

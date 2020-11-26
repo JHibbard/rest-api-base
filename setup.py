@@ -1,12 +1,21 @@
+# Standard Libraries
 from setuptools import setup, find_namespace_packages
+import pathlib
+
 
 APP_NAME = "rab"
 VERSION = "0.1.0"
 LICENSE = "MIT"
 AUTHOR = "James Hibbard"
-DESCRIPTION = (
-    "REST API Base"
-)
+DESCRIPTION = "REST API Base"
+
+
+# Directory containing this file
+HERE = pathlib.Path(__file__).parent
+
+# Text of README file
+README = (HERE / "README.md").read_text()
+
 
 setup(
     name=APP_NAME,
@@ -14,6 +23,8 @@ setup(
     license=LICENSE,
     author=AUTHOR,
     description=DESCRIPTION,
+    long_description=README,
+    long_description_content_type="text/markdown",
     install_requires=[
         "connexion[swagger-ui]==2.7.0",
         "PyYAML==5.3.1",
@@ -23,12 +34,21 @@ setup(
         "gunicorn==20.0.4",
     ],
     extras_require={
-        "docs": ["Sphinx==3.3.1", "sphinx-click==2.5.0", ],
-        "quality": ["black==20.8b1", "pyflakes==2.2.0", "radon==4.3.2", ],
+        "docs": [
+            "Sphinx==3.3.1",
+            "sphinx-click==2.5.0",
+        ],
+        "quality": [
+            "black==20.8b1",
+            "pyflakes==2.2.0",
+            "radon==4.3.2",
+        ],
     },
     packages=find_namespace_packages("src"),
     package_dir={"": "src"},
-    package_data={"": ["*.yaml"], },
+    package_data={
+        "": ["*.yaml"],
+    },
     entry_points="""
     [console_scripts]
         rab=rab.cli:cli

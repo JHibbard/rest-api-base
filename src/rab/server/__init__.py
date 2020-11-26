@@ -59,7 +59,9 @@ def _run_server(gunicorn_opts, host, port, workers):
     full_command = _build_gunicorn_command(gunicorn_opts, host, port, workers or 4)
     _logger.critical(full_command)
     exec_cmd(
-        full_command, env=env_map, stream_output=True,
+        full_command,
+        env=env_map,
+        stream_output=True,
     )
 
 
@@ -67,9 +69,9 @@ def _run_server(gunicorn_opts, host, port, workers):
 app = connexion.App(
     __name__,
     options={
-        'openapi_url': '/',
+        "openapi_url": "/",
         "swagger_ui": True,
-    }
+    },
 )
 
 # Empty Default Blueprint
@@ -78,5 +80,5 @@ CORS(app.app)
 
 # Business Logic Blueprints
 for name, module in apis.items():
-    path = os.path.join(module.__path__[0], 'api.yaml')
+    path = os.path.join(module.__path__[0], "api.yaml")
     app.add_api(path, base_path=module.BASE_PATH)
