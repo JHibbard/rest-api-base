@@ -18,6 +18,11 @@ def iter_namespace(ns_pkg):
     return pkgutil.iter_modules(ns_pkg.__path__, ns_pkg.__name__ + ".")
 
 
+try:
+    importlib.import_module('rab.plugins')
+except ModuleNotFoundError as error:
+    pass
+
 apis = (
     {
         name: importlib.import_module(name)
