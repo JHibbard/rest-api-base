@@ -4,7 +4,7 @@ import pathlib
 
 
 APP_NAME = "rab"
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 LICENSE = "MIT"
 AUTHOR = "James Hibbard"
 DESCRIPTION = "REST API Base"

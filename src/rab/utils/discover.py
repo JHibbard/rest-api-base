@@ -19,7 +19,7 @@ def iter_namespace(ns_pkg):
 
 
 try:
-    importlib.import_module('rab.plugins')
+    import rab.plugins
 except ModuleNotFoundError as error:
     pass
 
