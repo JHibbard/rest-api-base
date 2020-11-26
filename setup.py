@@ -8,6 +8,7 @@ VERSION = "0.1.0"
 LICENSE = "MIT"
 AUTHOR = "James Hibbard"
 DESCRIPTION = "REST API Base"
+URL = "https://github.com/JHibbard/rest-api-base"
 
 
 # Directory containing this file
@@ -25,6 +26,7 @@ setup(
     description=DESCRIPTION,
     long_description=README,
     long_description_content_type="text/markdown",
+    url=URL,
     install_requires=[
         "connexion[swagger-ui]==2.7.0",
         "PyYAML==5.3.1",
