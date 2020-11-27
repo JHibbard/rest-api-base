@@ -4,7 +4,7 @@ import pathlib
 
 
 APP_NAME = "rab"
-VERSION = "0.1.2"
+VERSION = "0.2.0"
 LICENSE = "MIT"
 AUTHOR = "James Hibbard"
 DESCRIPTION = "REST API Base"
@@ -44,6 +44,9 @@ setup(
             "black==20.8b1",
             "pyflakes==2.2.0",
             "radon==4.3.2",
+        ],
+        "sqlalchemy": [
+            "SQLAlchemy==1.3.20",
         ],
     },
     packages=find_namespace_packages("src"),

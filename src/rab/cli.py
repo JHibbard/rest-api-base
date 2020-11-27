@@ -53,3 +53,15 @@ def server(host, port, workers, gunicorn_opts):
     except ShellCommandException:
         eprint("Running the server failed. Please see the logs above for details.")
         sys.exit(1)
+
+
+@cli.command(help="Initialize Database.")
+@click.option(
+    "--uri",
+    required=True,
+    default=None,
+    help="SQLAlchemy uri connection string",
+)
+def database(uri):
+    """Initialize Database."""
+    click.echo("database")
